@@ -45,9 +45,9 @@ class Node:
 def _sqrt(self):
     """Square root of a ParameterExpression"""
     if _optionals.HAS_SYMENGINE:
-        return self._call(symengine.sqrt)
+        return self._call(symengine.sqrt,[])
 
-    return self._call(sp_sqrt)
+    return self._call(sp_sqrt,[])
 
 def _sign(self):
     """Sign of a ParameterExpression"""
